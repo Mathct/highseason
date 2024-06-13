@@ -1,0 +1,2105 @@
+/**
+ *------
+ * BGA framework: Gregory Isabelli & Emmanuel Colin & BoardGameArena
+ * highseason implementation : © <Mathieu Chatrain> <mathieu.chatrain@gmail.com>
+ *
+ * This code has been produced on the BGA studio platform for use on http://boardgamearena.com.
+ * See http://en.boardgamearena.com/#!doc/Studio for more information.
+ * -----
+ *
+ * highseason.css
+ *
+ * highseason stylesheet
+ *
+ */
+
+/*
+    This is the CSS stylesheet of your game User Interface.
+    
+    Styles defined on this file will be applied to the HTML elements you define in your
+    HTML template (highseason_highseason.tpl), and to HTML elements you create dynamically
+    (in highseason.js).
+    
+    Usually, you are using CSS to:
+    
+    1°) define the overall layout of your game
+        (ex: place the board on the top left, place player's hand beside, place the deck on the right, ...).
+
+    2°) create your CSS-sprites:
+        All images of your games should be gathered into a small number of image files. Then, using
+        background-image and background-position CSS properties, you create HTML blocks that can 
+        display these images correctly (see example below).
+    
+    3°) ... anything else:
+        It is really easy to add and remove CSS classes dynamically from your Javascript with
+        dojo.addClass and dojo.removeClass. It is also easy to check if an element has a class
+        (dojo.hasClass) or to get all elements with a specific class (dojo.query). This is why,
+        very often, using CSS classes for the logic of your user interface allow you to do complex
+        thing easily.
+        
+        
+     Note: on the production platform, this file will be compressed and comments will be removed.
+           Consequently, don't hesitate to put as many comments as necessary.
+*/
+
+
+/* Note: you must not use any @import directive */
+
+
+/********* You can start writing your CSS below this line: **********/
+
+
+#global {
+    width: 1104px;
+     height: 780px;
+     margin-left: auto;
+     margin-right: auto;
+     position: relative;
+     margin-top: 10px;
+     margin-left: calc(50% + -518px);
+     z-index: 5;
+          
+ }
+
+ #boardaction {
+   width: 94px;
+   height: 725px;
+   position: absolute;
+   background-image: url('img/action.jpg');
+   background-size: 100% 100%;
+   border: 1px solid rgb(73, 65, 65);
+   border-radius: 5px;
+   top: 40px;
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    z-index: 5;
+        
+}
+
+#first {
+   width: 80px;
+   height: 39px;
+   margin-top: 10px;
+   background-image: url('img/first.png');
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+#titre {
+   width: 200px;
+   height: 80px;
+   background-image: url('img/titre.png');
+   background-size: 100% 100%;
+   margin-left: auto;
+   margin-right: auto;
+   
+}
+
+#player_board_compteur {
+    
+   height: 110px;
+   background-color: #ebd5bd;
+   border-radius: 8px 0 0 8px;
+   box-shadow: 0 3px 8px rgba(0,0,0,.3);
+   clear: both;
+   padding: 5px 3px;
+   margin-bottom: 5px;
+
+
+
+}
+
+
+/* ACTION */
+
+.action {
+   width: 94px;
+   height: 84px;
+   position: absolute;
+   z-index: 15;
+   
+      
+}
+
+/* BOARDS HOTEL */
+
+
+ .hotel1 {
+    width: 1000px;
+    height: 604px;
+    position: absolute;
+    background-image: url('img/hotel1.jpg');
+    background-size: 100% 100%;
+    border-radius: 5px;
+    z-index: 5;
+    
+       
+}
+
+.hotel2 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel2.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel3 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel3.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel4 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel4.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel5 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel5.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel6 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel6.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel7 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel7.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+   
+      
+}
+
+.hotel8 {
+   width: 1000px;
+   height: 604px;
+   position: absolute;
+   background-image: url('img/hotel8.jpg');
+   background-size: 100% 100%;
+   border-radius: 5px;
+   z-index: 5;
+      
+}
+
+/* BOARDS STAFF */
+
+ .staff1 {
+    width: 1000px;
+    height: 121px;
+    position: absolute;
+    background-image: url('img/staff1.jpg');
+    background-size: 100% 100%;
+    top: 604px;
+    border-radius: 5px;
+    z-index: 5;
+         
+ }
+
+ .staff2 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff2.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+        
+}
+
+.staff3 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff3.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;
+        
+}
+
+.staff4 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff4.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;
+        
+}
+
+.staff5 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff5.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;
+        
+}
+
+.staff6 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff6.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;  
+}
+
+.staff7 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff7.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;
+        
+}
+
+.staff8 {
+   width: 1000px;
+   height: 121px;
+   position: absolute;
+   background-image: url('img/staff8.jpg');
+   background-size: 100% 100%;
+   top: 604px;
+   border-radius: 5px;
+   z-index: 5;
+        
+}
+
+/* STAFF ETAT*/
+
+.staff {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 10;
+   border-radius: 50%;
+
+       
+}
+
+.staffcheck { /* barre */
+
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+}
+
+       
+
+
+
+ 
+/* EMPLACEMENT PLAYER */
+
+ .playerborder {
+    position: absolute;
+    width: 1000px;
+    left: 0px;
+    height: 725px;
+    border-radius: 5px;
+    top: 30px;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+        
+ }
+
+ .titlename{
+    width: 1000px;
+    height: 23px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center; /* Pour centrer verticalement */
+    justify-content: center; /* Pour centrer horizontalement */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    
+    
+   
+  }
+
+  /* SWITCH PLAYER */
+
+  .left {
+    
+    cursor: pointer;
+    pointer-events: auto !important;
+  }
+
+  .right {
+    
+    cursor: pointer;
+    pointer-events: auto !important;
+  }
+
+  .left:hover {
+    
+   font-weight: bold;
+ }
+
+ .right:hover {
+   
+   
+   font-weight: bold;
+   
+ }
+
+  /* MASQUE BOARDS PLAYER */
+
+  .masque{
+
+   visibility: hidden;
+  }
+
+
+  /*  EYE PANEL PLAYER */
+
+  .eye {
+   width: 25px;
+   height: 25px;
+   position: relative;
+   background-image: url('img/eye30gray.png');
+   background-size: 100% 100%;
+   top: 5px;
+   cursor: pointer;
+   pointer-events: auto !important;
+          
+}
+
+.eye:hover {
+   width: 25px;
+   height: 25px;
+   position: relative;
+   background-image: url('img/eye30.png');
+   background-size: 100% 100%;
+   top: 5px;
+   cursor: pointer;
+   pointer-events: auto !important;
+       
+}
+
+
+/* POIGNEE */
+
+.poigneecontent {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 10;
+   border-radius: 50%;
+       
+}
+
+.poignee_1 {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: 0%;
+      
+}
+
+.poignee_2 {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -200%;
+      
+}
+
+.poignee_3 {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+
+       
+}
+
+/* SELECTABLE */
+
+.selectable {
+    
+   cursor: pointer;
+   pointer-events: auto !important;
+ }
+
+ .poigneecontent.selectable {
+
+   animation: selectablepoignee 1.5s linear infinite;
+ 
+ }
+
+ .action.selectable {
+
+   animation: selectableaction 1.5s linear infinite;
+ 
+ }
+
+ .credit.selectable {
+
+   animation: selectablecredit 1.5s linear infinite;
+ 
+ }
+
+ .staff.selectable {
+
+   animation: selectablepoignee 1.5s linear infinite;
+ 
+ }
+
+ .noanimationred {
+
+   animation: none !important;
+   background-color: rgba(255, 0, 0, 0.4);
+ }
+
+ .noanimationblue {
+   
+   animation: none !important;
+   background-color: rgba(0, 102, 255, 0.4);
+ }
+
+
+ @keyframes selectablepoignee {
+   0% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+   50% {
+         background-color: rgba(255, 0, 0, 0.8);
+   }
+   100% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+ }
+
+ @keyframes selectableaction {
+   0% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+   50% {
+         background-color: rgba(255, 0, 0, 0.5);
+   }
+   100% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+ }
+
+ @keyframes selectablecredit {
+   0% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+   50% {
+         background-color: rgba(0, 102, 255, 0.8);
+   }
+   100% {
+         background-color: rgba(0, 0, 255, 0);
+   }
+ }
+
+ /* SELECTED */
+
+ .selected {
+    
+   background-color: rgba(4, 99, 189, 0.4);
+   
+   
+ }
+
+ /* COUNT DICE AND ICON ON ACTION BOARD*/
+
+ .dice {
+
+   position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    justify-content: center;
+    display: flex; 
+    align-items: center; 
+    outline: 1.5px solid #000000;
+    color: #000000;
+    z-index: 14;
+    font-weight: bold;
+ }
+
+ .dicecontent {
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 5;
+   
+   
+}
+
+.dicedispo_1{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: 0%;
+
+ }
+
+ .dicedispo_2{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -100%;
+
+ }
+
+ .dicedispo_3{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -200%;
+
+ }
+
+ .dicedispo_4{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -300%;
+
+ }
+
+ .dicedispo_5{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -400%;
+
+ }
+
+ .dicedispo_6{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -500%;
+
+ }
+
+ #diceicon_1{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: 0%;
+
+ }
+
+ #diceicon_2{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -100%;
+
+ }
+
+ #diceicon_3{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -200%;
+
+ }
+
+ #diceicon_4{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -300%;
+
+ }
+
+ #diceicon_5{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -400%;
+
+ }
+
+ #diceicon_6{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 20;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -500%;
+
+ }
+
+ /* DICE ANIME*/
+/*
+ .diceanime_1{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: 0%;
+
+ }
+
+ .diceanime_2{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -100%;
+
+ }
+
+ .diceanime_3{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -200%;
+
+ }
+
+ .diceanime_4{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -300%;
+
+ }
+
+ .diceanime_5{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -400%;
+
+ }
+
+ .diceanime_6{
+   width: 25px;
+   height: 25px;
+   position: absolute;
+   z-index: 100;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -500%;
+
+ }
+*/
+
+ /* ROUND */
+
+ .round {
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   z-index: 10;
+      
+}
+
+.compteurrounds{
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   z-index: 15;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+}
+
+/* MONEY */
+
+.money {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   z-index: 10;
+   
+}
+
+.money_1 {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: 0%;
+      
+}
+
+.money_2 {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -200%;
+      
+}
+
+.money_3 {
+   width: 26px;
+   height: 26px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+
+       
+}
+
+/*  CREDIT */
+
+.credit {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   border-radius: 50%;
+   z-index: 10;
+   
+}
+
+.credituse {
+   width: 30px;
+   height: 30px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+
+       
+}
+
+/*  BONUS ETAGE  */
+
+.etage {
+   width: 31px;
+   height: 31px;
+   position: absolute;
+   border-radius: 50%;
+   z-index: 10;
+   
+   
+}
+
+.etage_1 {     /* OK */
+   width: 31px;
+   height: 31px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: 0%;
+
+       
+}
+
+.etage_2 {     /* NOK */
+   width: 31px;
+   height: 31px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+
+       
+}
+
+/*EMPEROR TRACK*/
+
+.emperor {
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   border-radius: 50%;
+   z-index: 10;
+   
+   
+   
+}
+
+.emperorbonusmalus {
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   border-radius: 50%;
+   z-index: 10;
+   
+   
+   
+}
+
+.emperorbonusmalus_1{   /* cercle */
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: 0%;
+}
+
+.emperorbonusmalus_2{   /* barre */
+   width: 24px;
+   height: 24px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+}
+
+
+.emperor_1 {     /* barre */
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: -100%;
+
+       
+}
+
+.emperor_2 {     /* cercle */
+   width: 22px;
+   height: 22px;
+   position: absolute;
+   z-index: 11;
+   background-image: url('img/poignee.png');
+   background-size: 300% 100%;
+   background-position-x: 0%;
+
+       
+}
+/* BOUTON */
+
+.bouton {
+   border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(1px 1px 1px rgba(0, 0, 0, 0.9));
+}
+
+
+/* ICON EMPEROR */
+
+
+.iconemperorboard1{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: 0%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconemperorboard2{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -100%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard3{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -200%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard4{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -300%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard5{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -400%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard6{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -500%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard7{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -600%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+ .iconemperorboard8{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-y: -700%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+.iconemperorpos1{
+   background-position-x: 0%;
+ }
+.iconemperorpos2{
+   background-position-x: -100%;
+}
+.iconemperorpos3{
+   background-position-x: -200%;
+}
+.iconemperorpos4{
+   background-position-x: -300%;
+}
+.iconemperorpos5{
+   background-position-x: -400%;
+}
+.iconemperorpos6{
+   background-position-x: -500%;
+}
+.iconemperorpos7{
+   background-position-x: -600%;
+}
+
+/* ICON BOARD */
+
+
+.iconboard1{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: 0%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard2{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -100%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard3{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -200%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard4{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -300%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard5{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -400%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard6{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -500%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard7{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -600%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .iconboard8{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-y: -700%;
+   border-radius: 10%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+
+.iconboardpos8{
+   background-position-x: 0%;
+ }
+.iconboardpos9{
+   background-position-x: -100%;
+}
+.iconboardpos10{
+   background-position-x: -200%;
+}
+.iconboardpos11{
+   background-position-x: -300%;
+}
+.iconboardpos12{
+   background-position-x: -400%;
+}
+.iconboardpos13{
+   background-position-x: -500%;
+}
+.iconboardpos14{
+   background-position-x: -600%;
+}
+.iconboardpos15{
+   background-position-x: -700%;
+}
+.iconboardpos16{
+   background-position-x: -800%;
+}
+.iconboardpos17{
+   background-position-x: -900%;
+}
+.iconboardpos18{
+   background-position-x: -1000%;
+}
+.iconboardpos19{
+   background-position-x: -1100%;
+}
+.iconboardpos20{
+   background-position-x: -1200%;
+}
+.iconboardpos21{
+   background-position-x: -1300%;
+}
+.iconboardpos22{
+   background-position-x: -1400%;
+}
+.iconboardpos23{
+   background-position-x: -1500%;
+}
+.iconboardpos24{
+   background-position-x: -1600%;
+}
+.iconboardpos25{
+   background-position-x: -1700%;
+}
+.iconboardpos26{
+   background-position-x: -1800%;
+}
+.iconboardpos27{
+   background-position-x: -1900%;
+}
+.iconboardpos28{
+   background-position-x: -2000%;
+}
+
+/* ICON DICE ACTION FOR BUTTON*/
+
+.dice_1{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: 0%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_2{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -100%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_31{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -200%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_32{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -300%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_41{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -400%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_42{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -500%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_5{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -600%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_61{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -700%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_62{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -800%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_631{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -900%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_632{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -1000%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_641{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -1100%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_642{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -1200%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .dice_65{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconaction.jpg');
+   background-size: 1400% 100%;
+   background-position-x: -1300%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ /* ICONE ACTION STAFF*/
+
+ .staff_3{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: 0%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_4{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -100%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_101{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -200%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_102{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -300%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_14{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -400%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_15{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -500%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_20{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -600%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_21{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -700%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ .staff_25{
+   width: 45px;
+   height: 30px;
+   display:inline-block;
+   vertical-align: middle;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -800%;
+   background-position-y: 0%;
+   border-radius: 5%;
+   /*border: solid 1px rgb(110, 110, 110);
+   filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));
+    -webkit-filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.9));*/
+ 
+ }
+
+ 
+
+
+ /*SCORE*/
+
+ .score{
+   position: absolute;
+   width: 32px;
+   height: 25px;
+   font-size: 100%;
+   display: flex;
+   align-items: center; 
+   text-align: center;
+   justify-content: center;
+   /*font-weight: bold;*/
+   font-style: italic;
+   
+   
+   
+}
+
+.icone_k{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/ressourceslog.png');
+   background-size: 200% 100%;
+   background-position-x: -0%;
+   display: inline-block;
+   
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+
+}
+
+.icone_e{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/ressourceslog.png');
+   background-size: 200% 100%;
+   background-position-x: -100%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+
+}
+
+.icone_dice1{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: 0%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.icone_dice2{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -100%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.icone_dice3{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -200%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.icone_dice4{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -300%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.icone_dice5{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -400%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.icone_dice6{
+   width: 20px;
+   height: 20px;
+   background-image: url('img/dice.png');
+   background-size: 600% 100%;
+   background-position-x: -500%;
+   display: inline-block;
+   /*filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);*/
+   transform: translateY(3px);
+
+}
+
+.anatooltip
+{
+ 	display: flex;
+  	align-items: center;
+	justify-content:center;	
+	flex-direction: column;
+	gap: 10px;
+    
+    
+}
+.anataction {
+    
+    width: 250px;
+    height: auto;
+    outline: 2px solid #395740;	
+    border-radius: 8px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.anataction2 {
+    
+   width: 150px;
+   height: auto;
+   outline: 2px solid #395740;	
+   border-radius: 8px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   
+}
+
+.stafftool {
+   width: 166px;
+   height: 121px;
+   position: absolute;
+   z-index: 9;
+   
+
+       
+}
+
+.scoretool {
+   width: 52px;
+   height: 31px;
+   position: absolute;
+   z-index: 9;
+ 
+       
+}
+
+.grouptool {
+   width: 72px;
+   height: 98px;
+   position: absolute;
+   z-index: 9;
+ 
+       
+}
+
+.etagetool {
+   width: 56px;
+   height: 67px;
+   position: absolute;
+   z-index: 9;
+ 
+       
+}
+
+.anataide {
+    
+   width: 200px;
+   height: auto;
+   outline: 2px solid #395740;	
+   border-radius: 8px;
+   padding-right: 10px;
+   padding-left: 10px;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   
+}
+
+.aide {
+
+   position: absolute;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    justify-content: center;
+    display: flex; 
+    align-items: center; 
+    /*outline: 1.5px solid #000000;
+    color: #000000;*/
+    z-index: 9;
+    font-weight: bold;
+    cursor: default;
+ }
+
+ .iconeaide1 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: 0%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide2 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -2000%;
+   background-position-y: -100%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide3 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconstaff.jpg');
+   background-size: 900% 100%;
+   background-position-x: -400%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide4 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -500%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide5 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconemperor.jpg');
+   background-size: 700% 800%;
+   background-position-x: -600%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide6 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -1300%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide7 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -1400%;
+   background-position-y: -400%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide8 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -900%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+.iconeaide9 {
+   width: 50px;
+   height: 34px;
+   position: relative;
+   background-image: url('img/iconboard.jpg');
+   background-size: 2100% 800%;
+   background-position-x: -800%;
+   background-position-y: 0%;
+   filter: drop-shadow(1px 1px 2px black);
+   -webkit-filter: drop-shadow(1px 1px 2px black);
+   /*margin-left: auto;
+   margin-right: auto;*/
+   float: left;
+   margin-bottom: 5px;
+   
+   
+}
+
+
