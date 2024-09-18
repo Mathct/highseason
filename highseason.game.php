@@ -293,7 +293,7 @@ class highseason extends Table
         foreach($listplayers as $player)
         {
             $result['bonusetage'][$player] = self::getObjectListFromDB( "SELECT l1 l1, l2 l2, l3 l3, l4 l4, l5 l5, l6 l6, l7 l7, l8 l8, c1 c1, c2 c2, c3 c3, c4 c4, c5 c5, c6 c6, c7 c7 FROM player WHERE player_id = {$player}" );
-            $result['score'][$player] = self::getObjectListFromDB( "SELECT vpstaff score_1, vpgroupe score_2, vpligne4 score_3, vpligne3 score_4, vpligne2 score_5, vpligne1 score_6, vpemperor score_7, moneygain score_81, moneyuse score_82, vpetage score_9, credituse score_10 FROM player WHERE player_id = {$player}" );
+            $result['score'][$player] = self::getObjectListFromDB( "SELECT vpstafftotal score_1, vpgroupe score_2, vpligne4 score_3, vpligne3 score_4, vpligne2 score_5, vpligne1 score_6, vpemperor score_7, moneygain score_81, moneyuse score_82, vpetage score_9, credituse score_10 FROM player WHERE player_id = {$player}" );
             $result['emperor'][$player] = self::getObjectListFromDB( "SELECT emperor1 emperor1, emperor2 emperor2, emperor3 emperor3 FROM player WHERE player_id = {$player}" );
             $result['bonusemperor'][$player] = self::getObjectListFromDB( "SELECT bonusemperor1 bonusemperor1, bonusemperor2 bonusemperor2, bonusemperor3 bonusemperor3 FROM player WHERE player_id = {$player}" );
             $result['malusemperor'][$player] = self::getObjectListFromDB( "SELECT malussemperor1 malusemperor1, malussemperor2 malusemperor2, malussemperor3 malusemperor3 FROM player WHERE player_id = {$player}" );
