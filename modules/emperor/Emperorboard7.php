@@ -31,12 +31,12 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $porteprepare = self::getObjectListFromDB( "SELECT porte FROM hotel WHERE etat = 1 AND player_id = {$this->player_id}", true );
+        $porteprepare = self::getObjectListFromDB( "SELECT `porte` FROM `hotel` WHERE `etat` = 1 AND `player_id` = {$this->player_id}", true );
         
         foreach ($porteprepare as $porte)
         {
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
-            $couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
+            $couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
             $cout = $niveau - 1;
             if (($cout <= $this->player_money )&&($couleur == 1))
             {
@@ -44,7 +44,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -82,12 +82,12 @@ class Emperorboard7 extends Emperor
 
             if (($porte >=3)&&($porte<=5))
              {
-                self::DbQuery( "UPDATE hotel set etat = 3 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 3 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
              }
             else
             {
-                self::DbQuery( "UPDATE hotel set etat = 2 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 2 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
 
             }
@@ -101,7 +101,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
             
             $spend = $niveau - 1;
             if ($spend > 0)
@@ -111,19 +111,19 @@ class Emperorboard7 extends Emperor
             
             if (($porte >=1)&&($porte<=7))
             {
-                self::DbQuery( "UPDATE player set vpligne1 = vpligne1 +1  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne1` = `vpligne1` +1  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=8)&&($porte<=14))
             {
-                self::DbQuery( "UPDATE player set vpligne2 = vpligne2 +2  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne2` = `vpligne2` +2  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=15)&&($porte<=21))
             {
-                self::DbQuery( "UPDATE player set vpligne3 = vpligne3 +3  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne3` = `vpligne3` +3  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=22)&&($porte<=28))
             {
-                self::DbQuery( "UPDATE player set vpligne4 = vpligne4 +4  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne4` = `vpligne4` +4  WHERE `player_id` = {$this->player_id}" );
             }
             
             highseason::$instance->BonusEtage($porte);
@@ -133,7 +133,7 @@ class Emperorboard7 extends Emperor
             if($porte >= 8)
 
             {
-                self::DbQuery( "INSERT INTO multiaction (type, action, arg) VALUES ('hotel', 'Porte', {$porte})");
+                self::DbQuery( "INSERT INTO `multiaction` (`type`, `action`, `arg`) VALUES ('hotel', 'Porte', {$porte})");
             }
        
         
@@ -153,12 +153,12 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $porteprepare = self::getObjectListFromDB( "SELECT porte FROM hotel WHERE etat = 1 AND player_id = {$this->player_id}", true );
+        $porteprepare = self::getObjectListFromDB( "SELECT `porte` FROM `hotel` WHERE `etat` = 1 AND `player_id` = {$this->player_id}", true );
         
         foreach ($porteprepare as $porte)
         {
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
-            $couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
+            $couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
             $cout = $niveau - 2;
             if (($cout <= $this->player_money )&&($couleur == 2))
             {
@@ -166,7 +166,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -204,12 +204,12 @@ class Emperorboard7 extends Emperor
 
             if (($porte >=3)&&($porte<=5))
              {
-                self::DbQuery( "UPDATE hotel set etat = 3 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 3 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
              }
             else
             {
-                self::DbQuery( "UPDATE hotel set etat = 2 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 2 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
 
             }
@@ -223,7 +223,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
             
             $spend = $niveau - 2;
             if ($spend > 0)
@@ -233,19 +233,19 @@ class Emperorboard7 extends Emperor
             
             if (($porte >=1)&&($porte<=7))
             {
-                self::DbQuery( "UPDATE player set vpligne1 = vpligne1 +1  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne1` = `vpligne1` +1  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=8)&&($porte<=14))
             {
-                self::DbQuery( "UPDATE player set vpligne2 = vpligne2 +2  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne2` = `vpligne2` +2  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=15)&&($porte<=21))
             {
-                self::DbQuery( "UPDATE player set vpligne3 = vpligne3 +3  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne3` = `vpligne3` +3  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=22)&&($porte<=28))
             {
-                self::DbQuery( "UPDATE player set vpligne4 = vpligne4 +4  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne4` = `vpligne4` +4  WHERE `player_id` = {$this->player_id}" );
             }
             
             highseason::$instance->BonusEtage($porte);
@@ -255,7 +255,7 @@ class Emperorboard7 extends Emperor
             if($porte >= 8)
 
             {
-                self::DbQuery( "INSERT INTO multiaction (type, action, arg) VALUES ('hotel', 'Porte', {$porte})");
+                self::DbQuery( "INSERT INTO `multiaction` (`type`, `action`, `arg`) VALUES ('hotel', 'Porte', {$porte})");
             }
        
         
@@ -280,8 +280,8 @@ class Emperorboard7 extends Emperor
         $porteadajacente = highseason::$instance->getPorteAdjacente(); 
         foreach ($porteadajacente as $porte)
         {
-            $niveau = self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
-            $couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+            $niveau = self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
+            $couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
             if((($this->player_staff1 == 8)||($this->player_staff2 == 8))&&($couleur == 2))
             {
                 $prix = 0;
@@ -305,7 +305,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -341,7 +341,7 @@ class Emperorboard7 extends Emperor
         $explode = explode("_", $varg1);
             $porte = intval($explode[1]);
 
-            self::DbQuery( "UPDATE hotel set etat = 1 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+            self::DbQuery( "UPDATE `hotel` set `etat` = 1 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
 
             highseason::$instance->notifyAllPlayers('preparing',clienttranslate( '${player_name} prepares the room ${nb}' ), array(
                 'porte' =>  $porte,
@@ -352,8 +352,8 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-                $niveau = self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
-                $couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+                $niveau = self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
+                $couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
     
                 if((($this->player_staff1 == 8)||($this->player_staff2 == 8))&&($couleur == 2))
                 {
@@ -402,7 +402,7 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $staffs = self::getObjectListFromDB( "SELECT pos pos, prix prix FROM staff WHERE player_id = {$this->player_id} AND etat = 0");
+        $staffs = self::getObjectListFromDB( "SELECT `pos` `pos`, `prix` `prix` FROM `staff` WHERE `player_id` = {$this->player_id} AND `etat` = 0");
         $reduction = 3;
 
         foreach ($staffs as $staff)
@@ -413,7 +413,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -447,7 +447,7 @@ class Emperorboard7 extends Emperor
             $explode = explode("_", $varg1);
             $pos = intval($explode[1]);
 
-            self::DbQuery( "UPDATE staff set etat = 1 WHERE player_id = {$this->player_id} AND pos = {$pos}" );
+            self::DbQuery( "UPDATE `staff` set `etat` = 1 WHERE `player_id` = {$this->player_id} AND `pos` = {$pos}" );
 
             highseason::$instance->notifyAllPlayers('gainstaff',clienttranslate( '${player_name} hires staff' ), array(
                 
@@ -458,7 +458,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            $prixstaff = self::getUniqueValueFromDB("SELECT prix FROM staff WHERE player_id={$this->player_id} AND pos = {$pos}");
+            $prixstaff = self::getUniqueValueFromDB("SELECT `prix` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = {$pos}");
             $reduction = 3;
             $money = $prixstaff - $reduction;
             if ($money>=1)
@@ -468,7 +468,7 @@ class Emperorboard7 extends Emperor
             
             highseason::$instance->Score();
 
-            $typestaff = self::getUniqueValueFromDB("SELECT type FROM staff WHERE player_id={$this->player_id} AND pos = {$pos}");
+            $typestaff = self::getUniqueValueFromDB("SELECT `type` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = {$pos}");
             highseason::$instance->addPendingTarget($this->player_id, "Staff", "Staff".$typestaff);
 
         }
@@ -485,7 +485,7 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $staffs = self::getObjectListFromDB( "SELECT pos pos, prix prix FROM staff WHERE player_id = {$this->player_id} AND etat = 0");
+        $staffs = self::getObjectListFromDB( "SELECT `pos` `pos`, `prix` `prix` FROM `staff` WHERE `player_id` = {$this->player_id} AND `etat` = 0");
         $reduction = 1;
 
         foreach ($staffs as $staff)
@@ -496,7 +496,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -530,7 +530,7 @@ class Emperorboard7 extends Emperor
             $explode = explode("_", $varg1);
             $pos = intval($explode[1]);
 
-            self::DbQuery( "UPDATE staff set etat = 1 WHERE player_id = {$this->player_id} AND pos = {$pos}" );
+            self::DbQuery( "UPDATE `staff` set `etat` = 1 WHERE `player_id` = {$this->player_id} AND `pos` = {$pos}" );
 
             highseason::$instance->notifyAllPlayers('gainstaff',clienttranslate( '${player_name} hires staff' ), array(
                 
@@ -541,7 +541,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            $prixstaff = self::getUniqueValueFromDB("SELECT prix FROM staff WHERE player_id={$this->player_id} AND pos = {$pos}");
+            $prixstaff = self::getUniqueValueFromDB("SELECT `prix` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = {$pos}");
             $reduction = 1;
             $money = $prixstaff - $reduction;
             if ($money>=1)
@@ -551,7 +551,7 @@ class Emperorboard7 extends Emperor
             
             highseason::$instance->Score();
 
-            $typestaff = self::getUniqueValueFromDB("SELECT type FROM staff WHERE player_id={$this->player_id} AND pos = {$pos}");
+            $typestaff = self::getUniqueValueFromDB("SELECT `type` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = {$pos}");
             highseason::$instance->addPendingTarget($this->player_id, "Staff", "Staff".$typestaff);
 
         }
@@ -568,12 +568,12 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $porteprepare = self::getObjectListFromDB( "SELECT porte FROM hotel WHERE etat = 1 AND player_id = {$this->player_id}", true );
+        $porteprepare = self::getObjectListFromDB( "SELECT `porte` FROM `hotel` WHERE `etat` = 1 AND `player_id` = {$this->player_id}", true );
         
         foreach ($porteprepare as $porte)
         {
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
-            $couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
+            $couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
             $cout = $niveau - 2;
             if (($cout <= $this->player_money )&&($couleur == 3))
             {
@@ -581,7 +581,7 @@ class Emperorboard7 extends Emperor
             }
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -619,12 +619,12 @@ class Emperorboard7 extends Emperor
 
             if (($porte >=3)&&($porte<=5))
              {
-                self::DbQuery( "UPDATE hotel set etat = 3 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 3 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
              }
             else
             {
-                self::DbQuery( "UPDATE hotel set etat = 2 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 2 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
 
             }
@@ -638,7 +638,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            $niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
+            $niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
             
             $spend = $niveau - 2;
             if ($spend > 0)
@@ -648,19 +648,19 @@ class Emperorboard7 extends Emperor
             
             if (($porte >=1)&&($porte<=7))
             {
-                self::DbQuery( "UPDATE player set vpligne1 = vpligne1 +1  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne1` = `vpligne1` +1  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=8)&&($porte<=14))
             {
-                self::DbQuery( "UPDATE player set vpligne2 = vpligne2 +2  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne2` = `vpligne2` +2  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=15)&&($porte<=21))
             {
-                self::DbQuery( "UPDATE player set vpligne3 = vpligne3 +3  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne3` = `vpligne3` +3  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=22)&&($porte<=28))
             {
-                self::DbQuery( "UPDATE player set vpligne4 = vpligne4 +4  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne4` = `vpligne4` +4  WHERE `player_id` = {$this->player_id}" );
             }
             
             highseason::$instance->BonusEtage($porte);
@@ -670,7 +670,7 @@ class Emperorboard7 extends Emperor
             if($porte >= 8)
 
             {
-                self::DbQuery( "INSERT INTO multiaction (type, action, arg) VALUES ('hotel', 'Porte', {$porte})");
+                self::DbQuery( "INSERT INTO `multiaction` (`type`, `action`, `arg`) VALUES ('hotel', 'Porte', {$porte})");
             }
        
         
@@ -690,12 +690,12 @@ class Emperorboard7 extends Emperor
         
         $ret['icon'] = '&nbsp;<div class="iconemperorboard'.$this->player_hotel.' iconemperorpos'.$parg1.'"></div> &nbsp;';
       
-        $porteprepare = self::getObjectListFromDB( "SELECT porte FROM hotel WHERE etat = 1 AND player_id = {$this->player_id}", true );
+        $porteprepare = self::getObjectListFromDB( "SELECT `porte` FROM `hotel` WHERE `etat` = 1 AND `player_id` = {$this->player_id}", true );
         
         foreach ($porteprepare as $porte)
         {
-            //$niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
-            //$couleur = self::getUniqueValueFromDB("SELECT couleur FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}");
+            //$niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
+            //$couleur = self::getUniqueValueFromDB("SELECT `couleur` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}");
             $cout = 0;
             //if (($cout <= $this->player_money )&&($couleur == 1))
             //{
@@ -703,7 +703,7 @@ class Emperorboard7 extends Emperor
             //}
         }
 
-        $credit = self::getUniqueValueFromDB("SELECT credituse FROM player WHERE player_id={$this->player_id}");
+        $credit = self::getUniqueValueFromDB("SELECT `credituse` FROM `player` WHERE `player_id`={$this->player_id}");
         if($credit<3)
         {
             $newcredit = $credit +1;
@@ -741,12 +741,12 @@ class Emperorboard7 extends Emperor
 
             if (($porte >=3)&&($porte<=5))
              {
-                self::DbQuery( "UPDATE hotel set etat = 3 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 3 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
              }
             else
             {
-                self::DbQuery( "UPDATE hotel set etat = 2 WHERE player_id = {$this->player_id} AND porte = {$porte}" );
+                self::DbQuery( "UPDATE `hotel` set `etat` = 2 WHERE `player_id` = {$this->player_id} AND `porte` = {$porte}" );
                 
 
             }
@@ -760,7 +760,7 @@ class Emperorboard7 extends Emperor
                 )
                 );
 
-            /*$niveau = intval(self::getUniqueValueFromDB("SELECT niveau FROM hotel WHERE porte = {$porte} AND player_id={$this->player_id}"));
+            /*$niveau = intval(self::getUniqueValueFromDB("SELECT `niveau` FROM `hotel` WHERE `porte` = {$porte} AND `player_id`={$this->player_id}"));
             
             $spend = $niveau - 2;
             if ($spend > 0)
@@ -770,19 +770,19 @@ class Emperorboard7 extends Emperor
             
             if (($porte >=1)&&($porte<=7))
             {
-                self::DbQuery( "UPDATE player set vpligne1 = vpligne1 +1  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne1` = `vpligne1` +1  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=8)&&($porte<=14))
             {
-                self::DbQuery( "UPDATE player set vpligne2 = vpligne2 +2  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne2` = `vpligne2` +2  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=15)&&($porte<=21))
             {
-                self::DbQuery( "UPDATE player set vpligne3 = vpligne3 +3  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne3` = `vpligne3` +3  WHERE `player_id` = {$this->player_id}" );
             }
             if (($porte >=22)&&($porte<=28))
             {
-                self::DbQuery( "UPDATE player set vpligne4 = vpligne4 +4  WHERE player_id = {$this->player_id}" );
+                self::DbQuery( "UPDATE `player` set `vpligne4` = `vpligne4` +4  WHERE `player_id` = {$this->player_id}" );
             }
             
             highseason::$instance->BonusEtage($porte);
@@ -792,7 +792,7 @@ class Emperorboard7 extends Emperor
             if($porte >= 8)
 
             {
-                self::DbQuery( "INSERT INTO multiaction (type, action, arg) VALUES ('hotel', 'Porte', {$porte})");
+                self::DbQuery( "INSERT INTO `multiaction` (`type`, `action`, `arg`) VALUES ('hotel', 'Porte', {$porte})");
             }
        
         

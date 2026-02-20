@@ -5,7 +5,7 @@ for($i = 1; $i<=8;$i++)
     include("board/Board{$i}.php");    
 }
 
-class Board extends APP_GameClass
+class Board extends \APP_DbObject
 {
     
         
@@ -16,7 +16,7 @@ class Board extends APP_GameClass
 
         $player_id = highseason::$instance->getActivePlayerId();
         
-        $p = self::getObjectFromDB("SELECT * FROM player WHERE player_id = {$player_id}");        
+        $p = self::getObjectFromDB("SELECT * FROM `player` WHERE `player_id` = {$player_id}");        
         $this->player_no = $p['player_no'];
         $this->player_id = $p['player_id'];
         $this->player_name = $p['player_name'];
@@ -27,8 +27,8 @@ class Board extends APP_GameClass
         $this->player_moneygain = intval($p['moneygain']);
         $this->player_moneyuse = intval($p['moneyuse']);
         $this->player_money = $this->player_moneygain- $this->player_moneyuse;
-        $this->player_staff1 = intval(self::getUniqueValueFromDB("SELECT type FROM staff WHERE player_id={$this->player_id} AND pos = 1 AND etat = 1"));
-        $this->player_staff2 = intval(self::getUniqueValueFromDB("SELECT type FROM staff WHERE player_id={$this->player_id} AND pos = 2 AND etat = 1"));
+        $this->player_staff1 = intval(self::getUniqueValueFromDB("SELECT `type` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = 1 AND `etat` = 1"));
+        $this->player_staff2 = intval(self::getUniqueValueFromDB("SELECT `type` FROM `staff` WHERE `player_id`={$this->player_id} AND `pos` = 2 AND `etat` = 1"));
 
 
 

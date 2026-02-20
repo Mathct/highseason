@@ -830,7 +830,7 @@ function (dojo, declare) {
                     }
 
 
-                    if (this.prefs[100].value == 2)
+                    if (this.bga.userPreferences.get(100) == 2)
                 {
                     var red1 = document.querySelectorAll('.poigneecontent.selectable');
                     var red2 = document.querySelectorAll('.action.selectable');

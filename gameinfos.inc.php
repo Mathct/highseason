@@ -15,16 +15,7 @@ $gameinfos = array(
 'db_undo_support' => true,
 
 // Name of the game in English (will serve as the basis for translation) 
-'game_name' => "High Season",
-
-// Game designer (or game designers, separated by commas)
-'designer' => 'John Doe',       
-
-// Game artist (or game artists, separated by commas)
-'artist' => 'Jane Doe',         
-
-// Year of FIRST publication of this game. Can be negative.
-'year' => 2000,                 
+'game_name' => "High Season",     
 
 // Game publisher (use empty string if there is no publisher)
 'publisher' => 'Lookout Games',                     
@@ -76,10 +67,7 @@ $gameinfos = array(
 'losers_not_ranked' => false,
 
 // Allow to rank solo games for games where it's the only available mode (ex: Thermopyles). Should be left to false for games where solo mode exists in addition to multiple players mode.
-'solo_mode_ranked' => false,
-
-// Game is "beta". A game MUST set is_beta=1 when published on BGA for the first time, and must remains like this until all bugs are fixed.
-'is_beta' => 1,                     
+'solo_mode_ranked' => false,                
 
 // Is this game cooperative (all players wins together or loose together)
 'is_coop' => 0,
@@ -87,19 +75,7 @@ $gameinfos = array(
 // Language dependency. If false or not set, there is no language dependency. If true, all players at the table must speak the same language.
 // If an array of shortcode languages such as array( 1 => 'en', 2 => 'fr', 3 => 'it' ) then all players at the table must speak the same language, and this language must be one of the listed languages.
 // NB: the default will be the first language in this list spoken by the player, so you should list them by popularity/preference.
-'language_dependency' => false,
-
-// Complexity of the game, from 0 (extremely simple) to 5 (extremely complex)
-'complexity' => 3,    
-
-// Luck of the game, from 0 (absolutely no luck in this game) to 5 (totally luck driven)
-'luck' => 3,    
-
-// Strategy of the game, from 0 (no strategy can be setup) to 5 (totally based on strategy)
-'strategy' => 3,    
-
-// Diplomacy of the game, from 0 (no interaction in this game) to 5 (totally based on interaction and discussion between players)
-'diplomacy' => 3,    
+'language_dependency' => false,  
 
 // Colors attributed to players
 'player_colors' => array( "ff0000", "008000", "0000ff", "ffa500", "773300" ),
@@ -123,42 +99,5 @@ $gameinfos = array(
     //  maximum possible value: 740 (ie: your game interface should fit with a 740px width (correspond to a 1024px screen)
     //  minimum possible value: 320 (the lowest value you specify, the better the display is on mobile)
     'min' => 1200,
-
-    // Maximum width
-    //  default: null (ie: no limit, the game interface is as big as the player's screen allows it).
-    //  maximum possible value: unlimited
-    //  minimum possible value: 740
-    'max' => null
 ),
-
-// Game presentation
-// Short game presentation text that will appear on the game description page, structured as an array of paragraphs.
-// Each paragraph must be wrapped with totranslate() for translation and should not contain html (plain text without formatting).
-// A good length for this text is between 100 and 150 words (about 6 to 9 lines on a standard display)
-'presentation' => array(
-//    totranslate("This wonderful game is about geometric shapes!"),
-//    totranslate("It was awarded best triangle game of the year in 2005 and nominated for the Spiel des Jahres."),
-//    ...
-),
-
-// Games tags (categories)
-//  You can attribute a maximum of ten "tags" for your game.
-//  Each tag has a specific ID (ex: 22 for the category "Prototype", 101 for the tag "Science-fiction theme game")
-//  Please see the "Game meta information" entry in the BGA Studio documentation for a full list of available tags:
-//  https://en.doc.boardgamearena.com/Game_meta-information:_gameinfos.inc.php#Tags
-//  IMPORTANT: this list should be ORDERED, with the most important tag first.
-//  NOTE: tags are only read during the first deploy from the file gameinfos.inc.php; afterwards, BGA is responsible for setting tags for a game.
-
-'tags' => array( 2 ),
-
-
-//////// BGA SANDBOX ONLY PARAMETERS (DO NOT MODIFY)
-
-// simple : A plays, B plays, C plays, A plays, B plays, ...
-// circuit : A plays and choose the next player C, C plays and choose the next player D, ...
-// complex : A+B+C plays and says that the next player is A+B
-'is_sandbox' => false,
-'turnControl' => 'simple'
-
-////////
 );
